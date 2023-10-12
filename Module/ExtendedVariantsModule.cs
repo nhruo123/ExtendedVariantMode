@@ -52,7 +52,7 @@ namespace ExtendedVariants.Module {
             InvertDashes, InvertGrab, AllStrawberriesAreGoldens, GameSpeed, ColorGrading, JellyfishEverywhere, RisingLavaEverywhere, RisingLavaSpeed, InvertHorizontalControls,
             BounceEverywhere, SuperdashSteeringSpeed, ScreenShakeIntensity, AnxietyEffect, BlurLevel, ZoomLevel, DashDirection, BackgroundBrightness, DisableMadelineSpotlight,
             ForegroundEffectOpacity, MadelineIsSilhouette, DashTrailAllTheTime, DisableClimbingUpOrDown, SwimmingSpeed, BoostMultiplier, FriendlyBadelineFollower,
-            DisableRefillsOnScreenTransition, RestoreDashesOnRespawn, DisableSuperBoosts, DisplayDashCount, MadelineHasPonytail, MadelineBackpackMode, InvertVerticalControls,
+            DisableRefillsOnScreenTransition, RestoreDashesOnRespawn, RestoreCustomDashStateOnRespawn, DisableSuperBoosts, DisplayDashCount, MadelineHasPonytail, MadelineBackpackMode, InvertVerticalControls,
             DontRefillStaminaOnGround, EveryJumpIsUltra, CoyoteTime, BackgroundBlurLevel, NoFreezeFrames, PreserveExtraDashesUnderwater, AlwaysInvisible, DisplaySpeedometer,
             WallSlidingSpeed, DisableJumpingOutOfWater, DisableDashCooldown, DisableKeysSpotlight, JungleSpidersEverywhere, CornerCorrection, PickupDuration,
             MinimumDelayBeforeThrowing, DelayBeforeRegrabbing, DashTimerMultiplier, JumpDuration, HorizontalSpringBounceDuration, HorizontalWallJumpDuration,
@@ -176,6 +176,7 @@ namespace ExtendedVariants.Module {
             VariantHandlers[Variant.FriendlyBadelineFollower] = new FriendlyBadelineFollower();
             VariantHandlers[Variant.DisableRefillsOnScreenTransition] = new DisableRefillsOnScreenTransition();
             VariantHandlers[Variant.RestoreDashesOnRespawn] = new RestoreDashesOnRespawn();
+            VariantHandlers[Variant.RestoreCustomDashStateOnRespawn] = new RestoreCustomDashStateOnRespawn();
             VariantHandlers[Variant.DisplayDashCount] = new DisplayDashCount();
             VariantHandlers[Variant.MadelineBackpackMode] = new MadelineBackpackMode();
             VariantHandlers[Variant.EveryJumpIsUltra] = new EveryJumpIsUltra();
@@ -242,6 +243,7 @@ namespace ExtendedVariants.Module {
             On.Celeste.LevelLoader.ctor += checkForceEnableVariants;
 
             typeof(LuaCutscenesUtils).ModInterop();
+            typeof(CustomDashState).ModInterop();
 
             if (Settings.MasterSwitch) {
                 // variants are enabled: we want to hook them on startup.

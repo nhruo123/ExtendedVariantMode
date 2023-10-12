@@ -61,6 +61,7 @@ trigger.fieldInformation = {
             "RefillJumpsOnDashRefill",
             "ResetJumpCountOnGround",
             "RestoreDashesOnRespawn",
+            "RestoreCustomDashStateOnRespawn",
             "RisingLavaEverywhere",
             "SnowballsEverywhere",
             "TheoCrystalsEverywhere",

@@ -1,4 +1,5 @@
 ﻿using Celeste.Mod;
+using System;
 using System.Collections.Generic;
 using YamlDotNet.Serialization;
 
@@ -10,6 +11,8 @@ namespace ExtendedVariants.Module {
         public bool ExtendedVariantsWereUsed { get; set; } = false;
 
         public int DashCountOnLatestRespawn { get; set; } = -1;
+
+        public Dictionary<string, bool> CustomDashStateOnLatestRespawn { get; set; } = new();
 
         public bool ExtendedVariantsDisplayedOnScreenViaTrigger { get; set; } = false;
 

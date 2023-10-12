@@ -104,6 +104,7 @@ const BooleanVariants = [
     "RefillJumpsOnDashRefill",
     "ResetJumpCountOnGround",
     "RestoreDashesOnRespawn",
+    "RestoreCustomDashStateOnRespawn",
     "RisingLavaEverywhere",
     "SnowballsEverywhere",
     "TheoCrystalsEverywhere",
